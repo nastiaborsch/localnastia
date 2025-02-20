@@ -18,6 +18,8 @@
             color: #fff;
             position: relative;
             overflow: hidden;
+            flex-direction: column;
+            padding: 20px;
         }
         .background-container {
             position: absolute;
@@ -32,7 +34,8 @@
             box-sizing: border-box;
         }
         .background-container img {
-            width: 300px;
+            width: 30%;
+            max-width: 200px;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -42,20 +45,21 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            max-width: 500px;
+            max-width: 90%;
+            width: 400px;
             border: 2px solid rgba(255, 255, 255, 0.5);
             animation: fadeIn 1.5s ease-in-out;
             z-index: 1;
             position: relative;
         }
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
         }
         .details {
             display: none;
             margin-top: 15px;
-            font-size: 18px;
+            font-size: 16px;
         }
         button {
             background: linear-gradient(45deg, #ff00ff, #ff4081);
@@ -74,6 +78,29 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .background-container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+            }
+            .background-container img {
+                width: 60%;
+                max-width: 150px;
+                margin: 10px 0;
+            }
+            .container {
+                width: 90%;
+                max-width: 350px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .details {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
